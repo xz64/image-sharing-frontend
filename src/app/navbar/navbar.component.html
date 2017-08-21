@@ -4,7 +4,8 @@
       <a class="navbar-brand" routerLink="/">Image Sharing</a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li><a routerLink="/login">Login</a></li>
+      <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
+      <li *ngIf="loggedIn"><a (click)="logout()">Logout</a></li>
     </ul>
   </div>
 </nav>
