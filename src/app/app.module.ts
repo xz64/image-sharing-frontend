@@ -18,6 +18,7 @@ import { ImageTileComponent } from './image/image-tile/image-tile.component';
 import { ImageTileGridComponent } from './image/image-tile-grid/image-tile-grid.component';
 import { RoutedUserImagesComponent } from './routed-user-images/routed-user-images.component';
 import { ImageWithFallbackComponent } from './image-with-fallback/image-with-fallback.component';
+import { AllUserImagesComponent } from './all-user-images/all-user-images.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ImageWithFallbackComponent } from './image-with-fallback/image-with-fal
     ImageTileComponent,
     ImageTileGridComponent,
     RoutedUserImagesComponent,
-    ImageWithFallbackComponent
+    ImageWithFallbackComponent,
+    AllUserImagesComponent
   ],
   imports: [
     BrowserModule,

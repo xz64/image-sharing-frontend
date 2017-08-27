@@ -13,6 +13,12 @@ class ImageService {
     .toPromise();
   }
 
+  getAllImages(): Promise<Array<ImageDTO>> {
+    return this.http.get('/api/images/all')
+    .map((res: Response) => res.json())
+    .toPromise();
+  }  
+
 }
 
 export { ImageService };
