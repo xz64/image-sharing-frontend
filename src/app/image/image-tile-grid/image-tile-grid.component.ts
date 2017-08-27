@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { ImageDTO } from '../image.interface';
 
@@ -9,6 +9,7 @@ import { ImageDTO } from '../image.interface';
 })
 export class ImageTileGridComponent implements OnInit {
   @Input() images: Array<ImageDTO>;
+  @Input() editable: boolean;
 
   constructor() { }
 

@@ -1,5 +1,5 @@
 <masonry>
   <masonry-brick *ngFor="let image of images">
-    <app-image-tile  [image]="image"></app-image-tile>
+    <app-image-tile [editable]="editable" [image]="image"></app-image-tile>
   </masonry-brick>
 </masonry>

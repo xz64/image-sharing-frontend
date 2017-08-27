@@ -5,4 +5,14 @@ interface ImageDTO {
   url: string
 }
 
-export { ImageDTO };
+interface DeleteRequest {
+  id: string
+}
+
+interface AddRequest {
+  id: string,
+  caption: string,
+  url: string
+}
+
+export { ImageDTO, DeleteRequest, AddRequest };

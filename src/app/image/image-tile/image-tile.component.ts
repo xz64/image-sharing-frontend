@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { ImageDTO } from '../image.interface';
+import { ImageService } from '../image.service';
 
 @Component({
   selector: 'app-image-tile',
@@ -9,10 +10,18 @@ import { ImageDTO } from '../image.interface';
 })
 export class ImageTileComponent implements OnInit {
   @Input() private image: ImageDTO;
+  @Input() editable: boolean;
 
-  constructor() { }
+  constructor(private imageService: ImageService) { }
 
   ngOnInit() {
   }
+
+  delete() {
+    this.imageService.imageDeletes.next({
+      id: this.image.id
+    });
+  }
+
 
 }
