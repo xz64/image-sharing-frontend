@@ -9,6 +9,7 @@ import 'rxjs/add/operator/toPromise';
 class UserService {
   public loggedInCheck: BehaviorSubject<boolean>;
   public csrfToken: string;
+  public userId: string;
 
   constructor (private http: Http) {
     this.loggedInCheck = new BehaviorSubject(false);
@@ -17,6 +18,9 @@ class UserService {
   checkAuthenticated() {
     return this.http.get('/api/session/authentication')
       .map((res: Response) => res.json())
+      .do(x => {
+        this.userId = x.userId
+      })
       .map(x => x.authenticated)
       .do(authenticated => {
         if (authenticated) {

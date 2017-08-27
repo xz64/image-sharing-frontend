@@ -5,6 +5,7 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li *ngIf="!loggedIn"><a routerLink="/login">Login</a></li>
+      <li *ngIf="loggedIn"><a routerLink="/images">Images</a></li>
       <li *ngIf="loggedIn"><a (click)="logout()">Logout</a></li>
     </ul>
   </div>
