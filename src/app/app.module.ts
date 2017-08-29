@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { MasonryModule } from 'angular2-masonry';
+import { FormsModule } from '@angular/forms';
+import { ImgFallbackModule } from 'ngx-img-fallback';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,8 +19,8 @@ import { MyImagesComponent } from './my-images/my-images.component';
 import { ImageTileComponent } from './image/image-tile/image-tile.component';
 import { ImageTileGridComponent } from './image/image-tile-grid/image-tile-grid.component';
 import { RoutedUserImagesComponent } from './routed-user-images/routed-user-images.component';
-import { ImageWithFallbackComponent } from './image-with-fallback/image-with-fallback.component';
 import { AllUserImagesComponent } from './all-user-images/all-user-images.component';
+import { AddImageFormComponent } from './add-image-form/add-image-form.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +33,16 @@ import { AllUserImagesComponent } from './all-user-images/all-user-images.compon
     ImageTileComponent,
     ImageTileGridComponent,
     RoutedUserImagesComponent,
-    ImageWithFallbackComponent,
-    AllUserImagesComponent
+    AllUserImagesComponent,
+    AddImageFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    MasonryModule
+    MasonryModule,
+    ImgFallbackModule,
+    FormsModule
   ],
   providers: [
     UserService,

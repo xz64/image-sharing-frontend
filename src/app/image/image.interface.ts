@@ -10,7 +10,6 @@ interface DeleteRequest {
 }
 
 interface AddRequest {
-  id: string,
   caption: string,
   url: string
 }

@@ -11,6 +11,7 @@ import { ImageService } from '../image.service';
 export class ImageTileComponent implements OnInit {
   @Input() private image: ImageDTO;
   @Input() editable: boolean;
+  placeholder = 'http://placehold.it/200x200';
 
   constructor(private imageService: ImageService) { }
 

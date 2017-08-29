@@ -30,6 +30,13 @@ class ImageService {
     return this.http.post('/api/images/delete', deleteRequest, { headers })
     .toPromise();
   }
+
+  addImage(addRequest: AddRequest) {
+    const headers = new Headers();
+    headers.append('xsrf-token', this.userService.csrfToken);
+    return this.http.post('/api/images', addRequest, { headers })
+    .toPromise();
+  }
 }
 
 export { ImageService };

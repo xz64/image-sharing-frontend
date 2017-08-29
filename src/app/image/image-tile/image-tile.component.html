@@ -1,6 +1,6 @@
 <div class="panel panel-default app-image-tile">
   <div class="panel-body">
-    <app-image-with-fallback [url]="image.url"></app-image-with-fallback>
+    <img [src]="url" src-fallback="{{ placeholder }}">
   </div>
   <div class="panel-footer">
     <button *ngIf="editable" (click)="delete()" style="float: right" class="btn btn-danger">Remove</button>
