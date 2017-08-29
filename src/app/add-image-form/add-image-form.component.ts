@@ -13,8 +13,8 @@ import { AddRequest } from '../image/image.interface';
 export class AddImageFormComponent implements OnInit, OnDestroy {
   @ViewChild('addForm') form: NgForm;
   private addSubscription: Subscription
-  private showSuccess = false;
-  private showError = false;
+  showSuccess = false;
+  showError = false;
 
   constructor(private imageService: ImageService) {
     this.addSubscription = imageService.imageAdds.subscribe(addReq => {

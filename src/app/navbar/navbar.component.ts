@@ -9,7 +9,7 @@ import { UserService } from '../user/user.service';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   private subscription: Subscription;
-  private loggedIn = false;
+  loggedIn = false;
 
   constructor(private userService: UserService) {
     this.subscription = userService.loggedInCheck.subscribe((loggedIn) => {

@@ -8,7 +8,7 @@ import { ImageDTO } from '../image/image.interface';
   styleUrls: ['./all-user-images.component.scss']
 })
 export class AllUserImagesComponent implements OnInit {
-  private images: Array<ImageDTO>;
+  images: Array<ImageDTO>;
   constructor(private imageService: ImageService) {
     this.imageService.getAllImages().then((images) => {
       this.images = images;

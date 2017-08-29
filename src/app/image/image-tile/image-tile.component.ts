@@ -9,7 +9,7 @@ import { ImageService } from '../image.service';
   styleUrls: ['./image-tile.component.scss']
 })
 export class ImageTileComponent implements OnInit {
-  @Input() private image: ImageDTO;
+  @Input() image: ImageDTO;
   @Input() editable: boolean;
   placeholder = 'http://placehold.it/200x200';
 

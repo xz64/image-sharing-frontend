@@ -11,9 +11,9 @@ import { DeleteRequest } from '../image/image.interface';
   styleUrls: ['./my-images.component.scss']
 })
 export class MyImagesComponent implements OnInit, OnDestroy {
-  private userId: string;
+  userId: string;
   private deleteSubscription: Subscription;
-  private reloadCounter = 0;
+  reloadCounter = 0;
 
   constructor(private userService: UserService, private imageService: ImageService) {
     this.userId = userService.userId;
